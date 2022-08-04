@@ -30,6 +30,12 @@ nav>h5{
     text-align: center;
 }
 
+.template{
+    height: 100vh;
+    margin-left: 15%;
+    margin-top: 30%;
+}
+
 `
 
 export default Wrapper;
