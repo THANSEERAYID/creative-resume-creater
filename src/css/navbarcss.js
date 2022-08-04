@@ -7,8 +7,20 @@ const NavbarCss = styled.nav`
     display: flex;
     justify-content:space-evenly;
     padding: 1rem;
+   
 
 }
+
+.nav-ul>li{
+    text-decoration: none;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+
 nav{
    
     height: 3.5rem;

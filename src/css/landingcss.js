@@ -14,9 +14,19 @@ nav>h1{
     position: absolute;
     font-family: Parisienne;
     font-size: 55px;
-    width: 35rem;
-    margin-top: 13rem;
-    margin-left: 8rem;
+    width: 45%;
+    margin-top: 15%;
+    margin-left: 10%;
+    text-align: center;
+}
+ 
+nav>h5{
+    position: absolute;
+    font-family: Parisienne;
+    font-size: 25px;
+    width: 45%;
+    margin-top: 12%;
+    margin-left: 10%;
     text-align: center;
 }
 
