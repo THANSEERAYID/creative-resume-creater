@@ -1,5 +1,6 @@
 import React from 'react';
 import html2pdf from 'html2pdf.js';
+import MyPDF from './PdfPage';
 
 
 const ResumePreview = ({ formData }) => {
@@ -32,11 +33,9 @@ const hobbies = [
 ];
 const Skills = ["html", "css", "tailwind", "java", "python", "c", "c++"];
     return(
-      <div className='scale-[0.3] sm:scale-[0.5] md:scale-[0.5] lg:scale-[0.6] xl:scale-[0.5] 2xl:scale-[0.6] 3xl:scale-[0.7] absolute md:top-[50%] left-[50%] -translate-x-[50%] translate-y-[20%]  md:-translate-x-[30%] lg:-translate-x-[20%] md:-translate-y-[44%] lg:-translate-y-[38%] xl:-translate-x-[20%] xl:-translate-y-[48%]'>
-
-      
+    
+      <div className='hidden  transform  md:block scale-[0.3] sm:scale-[0.5] md:scale-[0.5] lg:scale-[0.6] xl:scale-[0.7] 2xl:scale-[0.9] 3xl:scale-[0.9] absolute top-0 right-0  -translate-y-[26rem] lg:-translate-y-[20rem] xl:-translate-y-[15rem] 2xl:-translate-y-[0rem] 3xl:-translate-y-[6rem] translate-x-[12rem] lg:translate-x-[7rem] xl:translate-x-[5rem] 2xl:translate-x-[0rem]'>
     <div id="resume" >
-     
       <div className="w-[800px] h-[1050px] ">
         <div className="p-4">
           <div>
@@ -45,7 +44,7 @@ const Skills = ["html", "css", "tailwind", "java", "python", "c", "c++"];
                 <span
                   key={index}
                   style={{ color: colors[index % colors.length] }}
-                  className="font-bold text-xl"
+                  className="font-bold text-xl "
                 >
                   {char}
                 </span>
@@ -139,7 +138,7 @@ const Skills = ["html", "css", "tailwind", "java", "python", "c", "c++"];
           </div>
         </div>
 
-        <div className="flex mx-4 my-2 font-medium text-[#747474]">
+        <div className="flex mx-4 my-3 font-medium text-[#747474]">
           &#123; &#00;
           <p className="">
             {hobbies.map((hobby, i) => {
@@ -148,7 +147,7 @@ const Skills = ["html", "css", "tailwind", "java", "python", "c", "c++"];
                   <span
                     key={index}
                     style={{ color: colors[index % colors.length] }}
-                    className="font-medium capitalize border-b-2 pb-2  border-[#4f8ad5]"
+                    className="font-medium  border-b-2 pb-3.5  border-[#4f8ad5] "
                   >
                     {char}
                   </span>
@@ -268,6 +267,11 @@ const Skills = ["html", "css", "tailwind", "java", "python", "c", "c++"];
           </p>
         </div>
       
+      </div>
+
+      <div className="w-[800px] h-[1050px] ">
+       
+
       </div>
   
     </div>

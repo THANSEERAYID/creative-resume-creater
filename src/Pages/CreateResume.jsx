@@ -54,15 +54,15 @@ const ResumeBuilder = () => {
 
 <div className="resume-preview">
   {pdfDataUri ? (<embed src={pdfDataUri} />
-  ) : (<p>Enter your resume information and click the "Preview PDF" button to see a preview of your resume.</p>
+  ) : (<p className='flex mx-16'>Enter your resume information and click the "Download PDF" button to download your resume.</p>
   )}
 
-  <div className="resume-preview-buttons">
-    <button onClick={handlePreview} className="w-52 bg-black text-white">Preview PDF</button>
+  <div className="resume-preview-buttons flex justify-center">
+    {/* <button onClick={handlePreview} className="w-52 bg-black text-white">Preview PDF</button> */}
 
-    {pdfDataUri && (
-      <button onClick={handleDownload}>Download PDF</button>
-    )}
+    {/* {pdfDataUri && ( */}
+      <button className="w-52 bg-black text-white" onClick={handleDownload}>Download PDF</button>
+     {/* )} */}
   </div>
 </div>
     </div>
