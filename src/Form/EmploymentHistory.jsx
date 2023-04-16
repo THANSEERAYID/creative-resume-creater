@@ -11,11 +11,11 @@ import Grid from '@mui/material/Grid'
 import DatePicker from 'react-datepicker'
 
 import { Fragment, useState } from 'react'
-import ChipButton from '@/components/chipButton'
-import CardFieldArray from './components/CardFieldArray'
+import ChipButton from './components/chipButton'
+import CardFieldArray from './CardFieldArray'
 
 import 'react-datepicker/dist/react-datepicker.css'
-import DatePickerWrapper from '@/components/DatePickerWrapper'
+import DatePickerWrapper from './components/DatePickerWrapper'
 
 const EmploymentHistory = () => {
   const { register, control } = useFormContext()

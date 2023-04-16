@@ -8,22 +8,23 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import ProfileSummary from '@/views/add/ProfileSummary'
-import Intro from '@/views/add/Intro'
-import Skills from '@/views/add/Skills'
-import EmploymentHistory from '@/views/add/EmploymentHistory'
-import Projects from '@/views/add/Projects'
-import Stack from '@mui/material/Stack'
-import Education from '@/views/add/Education'
-import Extras from '@/views/add/Extras'
-import Languages from '@/views/add/Languages'
-import Achievement from '@/views/add/Achievement'
+import ProfileSummary from '../Form/ProfileSummary'
+import Intro from '../Form/Intro'
+import Skills from '../Form/Skills'
+import EmploymentHistory from '../Form/EmploymentHistory'
+import Projects from '../Form/Projects'
+
+import Education from '../Form/Education'
+import Extras from '../Form/Extras'
+import Languages from '../Form/Languages'
+import Achievement from '../Form/Achievement'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
-import { useSession, signIn } from 'next-auth/react'
+import { Stack } from '@mui/material'
 
 
-const AddForm = () => {
+
+const AddForm = ({ formData, onFormChange }) => {
   //   const dispatch = useDispatch();
 
   const methods = useForm({
@@ -65,10 +66,7 @@ const AddForm = () => {
       secondary: {
         main: 'rgb(102, 102, 102)'
       },
-      background: {
-        default: 'rgb(226, 226, 226)',
-        paper: 'rgb(226, 226, 226)'
-      },
+     
       blue: 'rgb(0, 57, 172)',
       orange: 'rgb(243, 137, 11)'
     },
@@ -140,7 +138,7 @@ const AddForm = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} md={4} order={{ xs: 2, md: 1 }}>
+            <Grid item xs={12} md={12} order={{ xs: 2, md: 1 }}>
               <Stack spacing={2} direction='column'>
                 <Skills />
                 <Projects />
@@ -149,7 +147,7 @@ const AddForm = () => {
               </Stack>
             </Grid>
 
-            <Grid item xs={12} md={8} order={{ xs: 1, md: 2 }}>
+            <Grid item xs={12} md={12} order={{ xs: 1, md: 2 }}>
               <Stack spacing={2} direction='column'>
                 <Card variant='outlined'>
                   <CardHeader title='Profile Summary' />

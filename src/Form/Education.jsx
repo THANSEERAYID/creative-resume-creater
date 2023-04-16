@@ -9,11 +9,11 @@ import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Grid'
 import { Fragment, useState } from 'react'
-import ChipButton from '@/components/chipButton'
-import CardFieldArray from './components/CardFieldArray'
+import ChipButton from './components/chipButton'
+import CardFieldArray from './CardFieldArray'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import DatePickerWrapper from '@/components/DatePickerWrapper'
+import DatePickerWrapper from './components/DatePickerWrapper'
 
 const Education = () => {
   const { register, control } = useFormContext()
