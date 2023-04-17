@@ -57,15 +57,18 @@ const ResumeBuilder = () => {
   return (
     <div class="resume-builder  flex ">
       <div>
-        {/* <PDFDownloadLink
+      <Resume formData={formData} />
+         <PDFDownloadLink
           document={<Resume formData={formData} />}
           fileName="my-document.pdf"
         >
-          {({ blob, url, loading, error }) =>
+          {/* {({ blob, url, loading, error }) =>
             loading ? "Loading document..." : "Download now!"
-          }
-        </PDFDownloadLink> */}
-        <Resume formData={formData} />
+          } */}
+          Download now!
+          
+        </PDFDownloadLink> 
+        
       </div>
 
       <div className="md:w-1/2">
@@ -75,16 +78,13 @@ const ResumeBuilder = () => {
 
           <div className="resume-preview">
             <div className="resume-preview-buttons flex justify-center">
-              {/* <button onClick={handlePreview} className="w-52 bg-black text-white">Preview PDF</button> */}
-
-              {/* {pdfDataUri && ( */}
+             
               <button
                 className="w-52 bg-black text-white"
                 onClick={handleDownload}
               >
                 Download PDF
               </button>
-              {/* )} */}
             </div>
           </div>
         </div>

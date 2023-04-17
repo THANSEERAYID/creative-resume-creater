@@ -1,7 +1,7 @@
 import React from 'react';
 import html2pdf from 'html2pdf.js';
 
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, PDFViewer } from '@react-pdf/renderer';
 
 
 
@@ -66,7 +66,14 @@ const hobbies = [
 ];
 const Skills = ["html", "css", "tailwind", "java", "python", "c", "c++"];
     return(
+      <PDFViewer>
       <Document>
+        <Page>
+          // use the form values to generate the PDF preview here
+        </Page>
+      </Document>
+    </PDFViewer>
+      /* <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.section}>
         <Text style={styles.title}>My PDF Document</Text>
@@ -79,7 +86,7 @@ const Skills = ["html", "css", "tailwind", "java", "python", "c", "c++"];
         </Text>
       </View>
     </Page>
-  </Document>
+  </Document> */
     
     //   <div className='hidden  transform  md:block scale-[0.3] sm:scale-[0.5] md:scale-[0.5] lg:scale-[0.6] xl:scale-[0.7] 2xl:scale-[0.9] 3xl:scale-[0.9] absolute top-0 right-0  -translate-y-[26rem] lg:-translate-y-[20rem] xl:-translate-y-[15rem] 2xl:-translate-y-[0rem] 3xl:-translate-y-[6rem] translate-x-[12rem] lg:translate-x-[7rem] xl:translate-x-[5rem] 2xl:translate-x-[0rem]'>
     // <div id="resume" >
