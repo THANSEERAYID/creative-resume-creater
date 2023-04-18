@@ -138,7 +138,7 @@ const AddForm = ({ formData, onFormChange }) => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} md={12} order={{ xs: 2, md: 1 }}>
+            <Grid item xs={12} md={12} order={{ xs: 1, md: 1 }}>
               <Stack spacing={2} direction='column'>
                 <Skills />
                 <Projects />
@@ -189,7 +189,7 @@ const AddForm = ({ formData, onFormChange }) => {
               <Extras />
             </div>
           </div> */}
-            <Grid item xs={12} order={{ xs: 3 }} justifyContent='center'>
+            {/* <Grid item xs={12} order={{ xs: 3 }} justifyContent='center'>
               <Card variant='outlined'>
                 <CardContent>
                   <Box display='flex' justifyContent='end'>
@@ -199,7 +199,7 @@ const AddForm = ({ formData, onFormChange }) => {
                   </Box>
                 </CardContent>
               </Card>
-            </Grid>
+            </Grid> */}
           </Grid>
         </form>
       </FormProvider>

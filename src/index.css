@@ -59,3 +59,7 @@ code {
   border-radius: 50%/100px 100px 0 0;
 }
 
+.svg path {
+  stroke: red;
+  stroke-width: 2px;
+}

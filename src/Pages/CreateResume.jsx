@@ -55,39 +55,17 @@ const ResumeBuilder = () => {
   };
 
   return (
-    <div class="resume-builder  flex ">
-      <div>
-      <Resume formData={formData} />
-         <PDFDownloadLink
-          document={<Resume formData={formData} />}
-          fileName="my-document.pdf"
-        >
-          {/* {({ blob, url, loading, error }) =>
-            loading ? "Loading document..." : "Download now!"
-          } */}
-          Download now!
-          
-        </PDFDownloadLink> 
-        
-      </div>
-
-      <div className="md:w-1/2">
-        <div
-          className="m-4">
-          <ResumeForm formData={formData} onFormChange={handleFormChange} />
-
-          <div className="resume-preview">
-            <div className="resume-preview-buttons flex justify-center">
-             
-              <button
-                className="w-52 bg-black text-white"
-                onClick={handleDownload}
-              >
-                Download PDF
-              </button>
-            </div>
-          </div>
+    <div className="resume-builder flex">
+      <div className="md:w-1/2 mx-4 my-16">
+        <ResumeForm formData={formData} onFormChange={handleFormChange} />
+        <div className="flex justify-end p-2 border rounded-md border-gray-300 my-4">
+          <button className="w-32 bg-black py-1 rounded-md  text-white" onClick={handleDownload}>
+            Download
+          </button>
         </div>
+      </div>
+      <div className="md:w-1/2 sticky h-full top-0  right-12">
+        <Resume formData={formData} />
       </div>
     </div>
   );
