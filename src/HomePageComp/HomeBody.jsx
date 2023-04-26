@@ -25,8 +25,8 @@ export default function HomeBody() {
               <img src={img1} className="object-scale-down w-full h-full " />
             </div>
           </div>
-          <div className=" hidden md:block p-5 absolute right-12 left-[55%] 2xl:left-[53%] xl:right-72 mt-[14.5rem] lg:mt-[16.5rem] ">
-            <p className="text-[#A020F0] text-right  font-medium text-lg absolute left-32 lg:mt-12 -top-8 ">
+          <div className=" hidden md:block p-5 absolute right-12 md:left-[50%] lg:left-[54%]  2xl:left-[53%] xl:right-72 mt-[14.5rem] lg:mt-[16.5rem] ">
+            <p className="text-[#A020F0] text-right  font-medium text-lg absolute left-32 lg:mt-12 -top-10 w-52 ">
               
               <br />{" "}
               <span className="font-normal text-sm md:text-lg text-white">
@@ -34,7 +34,7 @@ export default function HomeBody() {
                  A glimpse of your hobbies and interests to know you better.
               </span>
             </p>
-            <div className="curvedLine rotate-[120deg] lg:rotate-[160deg] flex justify-start"></div>
+            <div className="curvedLine rotate-[130deg] lg:rotate-[150deg] flex justify-start"></div>
           </div>
         </div>
         <p className="font-normal text-xs md:hidden text-left md:text-center text-white px-4">

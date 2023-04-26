@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import html2pdf from "html2pdf.js";
+import React, { useEffect, useState } from "react";
+
 import ResumeForm from "../CreateResumeComp/Form";
 import Resume from "../CreateResumeComp/ResumePreview";
+import ReactPDF from '@react-pdf/renderer';
+import { PDFViewer } from '@react-pdf/renderer';
 import {
   Document,
   Page,
@@ -10,6 +12,7 @@ import {
   StyleSheet,
   PDFDownloadLink,
 } from "@react-pdf/renderer";
+
 
 const ResumeBuilder = () => {
   const [formData, setFormData] = useState({});
@@ -21,51 +24,25 @@ const ResumeBuilder = () => {
     setPdfDataUri(null); // reset the PDF preview when the form changes
   };
 
-  const handlePreview = () => {
-    console.log("dskjfdb");
-    const element = document.getElementById("resume");
-    const options = {
-      margin: 0,
-      filename: "my_resume.pdf",
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-    };
 
-    html2pdf()
-      .from(element)
-      .set(options)
-      .outputPdf("datauristring")
-      .then((pdfDataUri) => {
-        setPdfDataUri(pdfDataUri);
-      });
-  };
 
-  const handleDownload = () => {
-    const element = document.getElementById("resume");
-    const options = {
-      margin: 0,
-      filename: "my_resume.pdf",
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-    };
-
-    html2pdf().from(element).set(options).save();
-  };
 
   return (
-    <div className="resume-builder flex">
-      <div className="md:w-1/2 mx-4 my-16">
-        <ResumeForm formData={formData} onFormChange={handleFormChange} />
-        <div className="flex justify-end p-2 border rounded-md border-gray-300 my-4">
-          <button className="w-32 bg-black py-1 rounded-md  text-white" onClick={handleDownload}>
-            Download
-          </button>
-        </div>
+    <div class="resume-builder  flex mx-5  ">
+      <div className="hidden lg:flex flex-col mx-6  justify-start items-center">
+      <Resume formData={formData} />
+         {/* <PDFDownloadLink
+          document={<Resume formData={formData} />}
+          fileName="my-document.pdf">
+          {({ blob, url, loading, error }) =>
+            loading ? "Loading document..." : "Download now!"
+          }
+        </PDFDownloadLink>  */}
       </div>
-      <div className="md:w-1/2 sticky h-full top-0  right-12">
-        <Resume formData={formData} />
+      <div className="flex-1">
+        <div>
+          <ResumeForm formData={formData} onFormChange={handleFormChange} />
+        </div>
       </div>
     </div>
   );

@@ -9,10 +9,10 @@ export default function Intro() {
   return (
     <div>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={6}>
           <OutlinedInput fullWidth placeholder='First Name' {...register('firstName')} />
         </Grid>
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={6}>
           <OutlinedInput fullWidth placeholder='Last Name' {...register('lastName')} />
         </Grid>
 
@@ -20,10 +20,10 @@ export default function Intro() {
           <OutlinedInput fullWidth placeholder='Position' {...register('position')} />
         </Grid>
 
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={6}>
           <OutlinedInput fullWidth placeholder='Email' {...register('email')} />
         </Grid>
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={6}>
           <OutlinedInput fullWidth placeholder='Phone' {...register('phone')} />
         </Grid>
 
@@ -31,10 +31,10 @@ export default function Intro() {
           <OutlinedInput fullWidth placeholder='City' {...register('city')} />
         </Grid>
 
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={6}>
           <OutlinedInput fullWidth placeholder='Linkedin' {...register('linkedin')} />
         </Grid>
-        <Grid item xs={12} sm={12}>
+        <Grid item xs={12} sm={6}>
           <OutlinedInput fullWidth placeholder='GitHub' {...register('github')} />
         </Grid>
       </Grid>
