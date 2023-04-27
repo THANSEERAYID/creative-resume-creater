@@ -7,8 +7,6 @@ import img from '../Images/resume page1.jpg'
 
 
 
-
-
 const Resume = ({ formData }) => {
 
 
@@ -89,11 +87,14 @@ const Resume = ({ formData }) => {
     "listening podcast",
   ];
   const Skills = ["html", "css", "tailwind", "java", "python", "c", "c++"];
+
+
   return (
     <div className='h-screen w-full sticky top-16 flex justify-center'>
-      <div className='lg:h-[85vh]  border '>
-        <PDFViewer className='w-full h-full'>
+      <div className='lg:h-[86vh] aspect-h-[1.141] aspect-w-1  border '>
+        <PDFViewer className='w-full h-full'  backgroundColor="red">
           <Document style={styles.Document} >
+          
             <Page size="A4" style={styles.page}>
               <View style={styles.section}>
                 <View style={{display:"flex", flexDirection:"row"}}>

@@ -23,6 +23,7 @@ const Skills = () => {
   return (
     <CardFieldArray
       title='Skills'
+      
       action={<ChipButton color='primary' variant='outlined' label={<AddRoundedIcon />} onClick={() => append()} />}
       fields={fields}
     >
@@ -33,8 +34,9 @@ const Skills = () => {
               return (
                 <Fragment key={item.id}>
                   <Grid item xs={12}>
-                    <FormControl fullWidth>
+                    <FormControl fullWidth >
                       <OutlinedInput
+                      size="small"
                         type='text'
                         placeholder='Skill'
                         endAdornment={

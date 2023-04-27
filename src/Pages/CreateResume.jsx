@@ -28,8 +28,8 @@ const ResumeBuilder = () => {
 
 
   return (
-    <div class="resume-builder  flex mx-5  ">
-      <div className="hidden lg:flex flex-col mx-6  justify-start items-center">
+    <div class="resume-builder  flex mx-5   ">
+      <div className="hidden w-1/2 md:flex flex-col mx-6  justify-start items-center">
       <Resume formData={formData} />
          {/* <PDFDownloadLink
           document={<Resume formData={formData} />}
@@ -39,7 +39,7 @@ const ResumeBuilder = () => {
           }
         </PDFDownloadLink>  */}
       </div>
-      <div className="flex-1">
+      <div className="flex-1 w-1/2 mt-2">
         <div>
           <ResumeForm formData={formData} onFormChange={handleFormChange} />
         </div>
