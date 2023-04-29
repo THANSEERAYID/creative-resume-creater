@@ -24,7 +24,7 @@ const Skills = () => {
     <CardFieldArray
       title='Skills'
       
-      action={<ChipButton color='primary' variant='outlined' label={<AddRoundedIcon />} onClick={() => append()} />}
+      action={<ChipButton  size='small' color='primary' variant='outlined' label={<AddRoundedIcon />} onClick={() => append()} />}
       fields={fields}
     >
       {fields.length ? (
@@ -36,12 +36,13 @@ const Skills = () => {
                   <Grid item xs={12}>
                     <FormControl fullWidth >
                       <OutlinedInput
-                      size="small"
+                        size="small"
                         type='text'
                         placeholder='Skill'
                         endAdornment={
                           <InputAdornment position='end'>
                             <ChipButton
+                             size='small'
                               color='primary'
                               onClick={() => remove(index)}
                               label={<RemoveRoundedIcon />}

@@ -24,7 +24,7 @@ const Extras = () => {
   return (
     <CardFieldArray
       title='Extras'
-      action={<ChipButton color='primary' variant='outlined' label={<AddRounded />} onClick={() => append()} />}
+      action={<ChipButton  size='small' color='primary' variant='outlined' label={<AddRounded />} onClick={() => append()} />}
       fields={fields}
     >
       {fields.length > 0 && (
@@ -36,12 +36,14 @@ const Extras = () => {
                   <Grid item xs={12}>
                     <FormControl fullWidth>
                       <OutlinedInput
+                       size='small'
                         type='text'
                         placeholder='Extra'
                         endAdornment={
                           <InputAdornment position='end'>
                             <ChipButton
                               color='primary'
+                              size='small'
                               variant='outlined'
                               label={<RemoveRounded />}
                               onClick={() => remove(index)}

@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <CardFieldArray
       title='Projects'
-      action={<ChipButton color='primary' variant='outlined' label={<AddRoundedIcon />} onClick={() => append()} />}
+      action={<ChipButton  size='small' color='primary' variant='outlined' label={<AddRoundedIcon />} onClick={() => append()} />}
       fields={fields}
     >
       {fields.length ? (
@@ -35,10 +35,12 @@ const Projects = () => {
                     <FormControl fullWidth variant='outlined'>
                       <OutlinedInput
                         type='text'
+                        size='small'
                         placeholder='Project'
                         endAdornment={
                           <InputAdornment position='end'>
                             <ChipButton
+                             size='small'
                               color='primary'
                               variant='outlined'
                               label={<RemoveRoundedIcon />}

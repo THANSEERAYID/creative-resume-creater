@@ -22,7 +22,7 @@ const Languages = () => {
   return (
     <CardFieldArray
       title='Languages'
-      action={<ChipButton color='primary' variant='outlined' label={<AddRoundedIcon />} onClick={() => append()} />}
+      action={<ChipButton  size='small' color='primary' variant='outlined' label={<AddRoundedIcon />} onClick={() => append()} />}
       fields={fields}
     >
       {fields.length ? (
@@ -35,10 +35,12 @@ const Languages = () => {
                     <FormControl fullWidth>
                       <OutlinedInput
                         type='text'
+                        size='small'
                         placeholder='Language'
                         endAdornment={
                           <InputAdornment position='end'>
                             <ChipButton
+                             size='small'
                               color='primary'
                               onClick={() => remove(index)}
                               label={<RemoveRoundedIcon />}

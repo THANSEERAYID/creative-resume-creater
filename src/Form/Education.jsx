@@ -27,7 +27,7 @@ const Education = () => {
   return (
     <CardFieldArray
       title='Education'
-      action={<ChipButton color='primary' variant='outlined' onClick={() => append()} label={<AddRounded />} />}
+      action={<ChipButton  size='small' color='primary' variant='outlined' onClick={() => append()} label={<AddRounded />} />}
       fields={fields}
     >
       <CardContent>
@@ -42,6 +42,7 @@ const Education = () => {
                         <ChipButton
                           // disabled={fields.length === 1}
                           color='primary'
+                          size='small'
                           variant='outlined'
                           onClick={() => remove(index)}
                           label={<RemoveRounded />}
@@ -51,10 +52,11 @@ const Education = () => {
                     <CardContent>
                       <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
-                          <OutlinedInput fullWidth placeholder='Course' {...register(`education.${index}.course`)} />
+                          <OutlinedInput  size='small' fullWidth placeholder='Course' {...register(`education.${index}.course`)} />
                         </Grid>
                         <Grid item xs={12} sm={6}>
                           <OutlinedInput
+                           size='small'
                             fullWidth
                             placeholder='Institution'
                             {...register(`education.${index}.institution`)}
@@ -73,7 +75,7 @@ const Education = () => {
                                   showMonthYearPicker
                                   selected={field.value}
                                   onChange={date => field.onChange(date)}
-                                  customInput={<OutlinedInput fullWidth />}
+                                  customInput={<OutlinedInput  size='small' fullWidth />}
                                 />
                               )}
                             />
@@ -91,7 +93,7 @@ const Education = () => {
                                   showMonthYearPicker
                                   selected={field.value}
                                   onChange={date => field.onChange(date)}
-                                  customInput={<OutlinedInput fullWidth />}
+                                  customInput={<OutlinedInput  size='small' fullWidth />}
                                 />
                               )}
                             />
@@ -100,6 +102,7 @@ const Education = () => {
 
                         <Grid item xs={12} sm={6}>
                           <OutlinedInput
+                           size='small'
                             fullWidth
                             placeholder='Location'
                             {...register(`education.${index}.location`)}
@@ -107,6 +110,7 @@ const Education = () => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                           <OutlinedInput
+                           size='small'
                             fullWidth
                             placeholder='Percentage'
                             {...register(`education.${index}.percentage`)}

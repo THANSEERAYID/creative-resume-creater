@@ -7,6 +7,7 @@ const ChipButton = styled(Chip) (({theme}) => ({
         display: 'flex',
         jsutifyContent: 'center',
         alignItems: 'center'
+        
     }
 }))
 

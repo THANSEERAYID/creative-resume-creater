@@ -5,7 +5,7 @@ import OutlinedInput from '@mui/material/OutlinedInput'
 
 const ProfileSummary = () => {
   const { register } = useFormContext()
-  return <OutlinedInput fullWidth placeholder='Profile Summary' multiline minRows={6} {...register('profileSummary')} />
+  return <OutlinedInput size='small' fullWidth placeholder='Profile Summary' multiline minRows={6} {...register('profileSummary')} />
 }
 
 export default ProfileSummary

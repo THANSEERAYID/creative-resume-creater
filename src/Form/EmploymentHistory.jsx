@@ -29,7 +29,7 @@ const EmploymentHistory = () => {
   return (
     <CardFieldArray
       title='Employment History'
-      action={<ChipButton color='primary' onClick={() => append()} variant='outlined' label={<AddRoundedIcon />} />}
+      action={<ChipButton  size='small' color='primary' onClick={() => append()} variant='outlined' label={<AddRoundedIcon />} />}
       fields={fields}
     >
       <CardContent>
@@ -41,6 +41,7 @@ const EmploymentHistory = () => {
                   <CardHeader
                     action={
                       <ChipButton
+                      size='small'
                         color='primary'
                         // disabled={fields.length === 1}
                         label={<RemoveRoundedIcon />}
@@ -53,6 +54,7 @@ const EmploymentHistory = () => {
                     <Grid container spacing={2}>
                       <Grid item xs={12} sm={6}>
                         <OutlinedInput
+                        size='small'
                           fullWidth
                           placeholder='Position'
                           {...register(`employmentHistory.${index}.position`)}
@@ -60,6 +62,7 @@ const EmploymentHistory = () => {
                       </Grid>
                       <Grid item xs={12} sm={6}>
                         <OutlinedInput
+                         size='small'
                           fullWidth
                           placeholder='Company Name'
                           {...register(`employmentHistory.${index}.companyName`)}
@@ -74,11 +77,12 @@ const EmploymentHistory = () => {
                             render={({ field }) => (
                               <DatePicker
                                 dateFormat='MM/yyyy'
+                                
                                 placeholderText='Start Date'
                                 showMonthYearPicker
                                 selected={field.value}
                                 onChange={date => field.onChange(date)}
-                                customInput={<OutlinedInput fullWidth />}
+                                customInput={<OutlinedInput fullWidth  size='small' />}
                               />
                             )}
                           />
@@ -96,7 +100,7 @@ const EmploymentHistory = () => {
                                 showMonthYearPicker
                                 selected={field.value}
                                 onChange={date => field.onChange(date)}
-                                customInput={<OutlinedInput fullWidth />}
+                                customInput={<OutlinedInput fullWidth  size='small' />}
                               />
                             )}
                           />
@@ -104,6 +108,7 @@ const EmploymentHistory = () => {
                       </Grid>
                       <Grid item xs={12} sm={12}>
                         <OutlinedInput
+                         size='small'
                           fullWidth
                           placeholder='Location'
                           {...register(`employmentHistory.${index}.location`)}
@@ -112,6 +117,7 @@ const EmploymentHistory = () => {
 
                       <Grid item xs={12}>
                         <OutlinedInput
+                         size='small'
                           fullWidth
                           multiline
                           minRows={3}
