@@ -50,7 +50,7 @@ export default function HomeBody() {
 
       <div className="xl:mx-32 2xl:mx-52 bg-black">
         <Box prop={<div className="flex flex-col items-center bg-black">
-          <div className=" flex-col justify-center pt-12 relative px-4">
+          <div className=" flex-col justify-center md:pt-12 relative px-4">
             <div className="curvedLine hidden md:block absolute mt-32 flex justify-end -rotate-[50deg]"></div>
             <p className="text-[#A020F0] h-52 md:h-96 md:pl-52 font-medium text-lg lg:w-[35rem] ">
               1. Contact Information
