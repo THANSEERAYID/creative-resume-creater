@@ -20,7 +20,7 @@ export default function Navbar() {
    const [currentItem, setItem] = useState("Dashboard");
 
   return (
-    <Disclosure as="nav" className="bg-black sticky top-0 z-[10000] ">
+    <Disclosure as="nav" className="bg-black sticky top-0 z-[10] ">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -53,6 +53,7 @@ export default function Navbar() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <Link
+                      style={{ fontFamily:'sans-serif'}}
                         key={item.name}
                         to={item.href}
                         onClick={()=>{setItem(item.name)}}
@@ -140,6 +141,7 @@ export default function Navbar() {
             <div className="space-y-1 px-2 pt-2 pb-3">
               {navigation.map((item) => (
                 <Disclosure.Button
+                style={{fontWeight:"bold"}}
                   key={item.name}
                   as="a"
                   href={item.href}

@@ -59,3 +59,51 @@ code {
   border-radius: 50%/100px 100px 0 0;
 }
 
+
+
+
+@media screen and (max-width: 1200px) {
+  .react-pdf__Page__canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+
+/* @media screen and (min-width: 1536px) {
+  .react-pdf__Page__canvas {
+    width: 700px !important;
+    height: 100% !important;
+  }
+}
+ */
+
+
+ .path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.dashed {
+  stroke-dasharray: 5, 12;
+}
+#arrow {
+  animation: arrow 2s linear forwards;
+  opacity: 0;
+}
+@keyframes arrow {
+  to {
+    opacity: 1;
+  }
+}
+

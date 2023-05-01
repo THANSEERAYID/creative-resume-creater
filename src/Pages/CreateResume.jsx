@@ -29,19 +29,19 @@ const ResumeBuilder = () => {
 
 
   return (
-    <div class="#resume-builder flex mx-2 bg-white">
-      <div className="hidden w-1/2 xl:flex m-2  bg-white flex-col justify-start items-center">
+    <div class="#resume-builder flex mx-2 bg-white space-x-2">
+      <div className="hidden w-1/2 lg:flex xl:mx-4  my-2  bg-white flex-col justify-start items-center">
         <BlobProvider document={<Resume formData={formData} />}>
           {({ blob, url, loading, error }) => {
             return (
-              <Document file={url} onLoadSuccess={onDocumentLoadSuccess} className='w-full h-[100vh/80]  sticky top-16 flex justify-center items-start bg-white'  loading={<div className="h-screen w-full bg-white text-green-300">waitdskjfbsdlf.kbjds.fkjbds.vd sf.vkjdsbf.dsjkf vds.jfkbd.sjkf ds.jfkbds.kf ds.kjbf..</div>} >
-              {loading ? <div className="h-screen w-full bg-white text-red-300">wait..</div> :<Page pageNumber={pageNumber} className='shadow-2xl border  bg-white' />}
+              <Document file={url} onLoadSuccess={onDocumentLoadSuccess} className='sticky top-16 flex justify-center items-start bg-white'  loading={<div className="h-screen w-full bg-white"></div>} >
+              {loading ? <div className="h-screen w-full bg-white"></div> :<Page pageNumber={pageNumber} className='shadow-lg xl:shadow-xl border  bg-white' />}
               </Document>
             )
           }}
         </BlobProvider>
       </div>
-      <div className="flex-1 w-1/2 m-4 flex justify-center 2xl:justify-start items-center">
+      <div className="flex-1 w-1/2 xl:mx-4 my-2 flex justify-center 2xl:justify-start items-center">
         <div>
           <ResumeForm handleFormChange={handleFormChange} />
         </div>

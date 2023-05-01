@@ -192,7 +192,7 @@ const AddForm = ({ handleFormChange }) => {
             </div>
           </div> */}
               <Grid item xs={12} order={{ xs: 3 }} justifyContent='center' >
-                  <Box display='flex' justifyContent='space-between' className='fixed right-[50%] left-5 bottom-5 w-1/2 '>
+                  <Box display='flex' justifyContent='space-between' className='fixed right-[50%] left-2 bottom-2 w-1/2 '>
                     <Button type="submit" variant='contained'>
                       Preview
                     </Button>

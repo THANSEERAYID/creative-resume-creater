@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import AnimatedArrow from '../components/AnimatedArrow'
 
 const links = [
     { name: 'Our Templates', href: '#' },
@@ -15,7 +16,7 @@ const links = [
   export default function Header() {
     return (
       <div className="relative isolate overflow-hidden bg-black py-24 sm:py-32">
-       
+      
         <svg
           viewBox="0 0 1097 845"
           aria-hidden="true"
@@ -88,7 +89,9 @@ const links = [
               ))}
             </dl>
           </div>
+         
         </div>
+        <AnimatedArrow />
       </div>
     )
   }
