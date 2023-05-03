@@ -11,6 +11,7 @@ import { useInView } from "react-intersection-observer";
 
 import { useEffect } from "react";
 import AnimatedArrow from "../components/AnimatedArrow";
+import Scroll from "../components/scrollanimation";
 
 const Box = ({ prop }) => {
 
@@ -27,7 +28,7 @@ const Box = ({ prop }) => {
 
   const boxVariant = {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.75 } },
-    hidden: { opacity: 0.1, scale: 0.5 }
+    hidden: { opacity: 0, scale: 0.95 }
   };
   return (
     <motion.div
@@ -46,13 +47,15 @@ const Box = ({ prop }) => {
 
 export default function HomeBody() {
   return (
-    <div className="bg-black ">
+    <div className="bg-black  text-[#A020F0] font-medium  ">
+      {/* <Scroll props={<div className="h-32 bg-white w-32">hello</div>} /> */}
+      <div className=" bg-black">
 
-      <div className="xl:mx-32 2xl:mx-52 bg-black">
-        <Box prop={<div className="flex flex-col items-center bg-black">
-          <div className=" flex-col justify-center md:pt-12 relative px-4">
-            <div className="curvedLine hidden md:block absolute mt-32 flex justify-end -rotate-[50deg]"></div>
-            <p className="text-[#A020F0] h-52 md:h-96 md:pl-52 font-medium text-lg lg:w-[35rem] ">
+        <Box prop={<div className="flex flex-col items-center justify-center w-screen">
+          <div className="flex">
+          <div className=" flex flex-col justify-end items-start">
+           
+            <p className="text-[#A020F0] text-lg w-full md:w-96 p-4">
               1. Contact Information
               <br />{" "}
               <span className="font-normal text-sm md:text-lg text-white">
@@ -60,26 +63,75 @@ export default function HomeBody() {
                 email address.
               </span>
             </p>
-            <div className=" w-full  md:w-[35rem] p-5 -mt-28 md:-mt-24 lg:-ml-24 relative">
-              <img src={img1} className="object-scale-down w-full h-full " />
+            <div className="hidden md:block flex justify-start w-20">
+              <AnimatedArrow props={<svg height="100px" viewBox="0 0 315 107" version="1.1" style={{ overflow: 'visible', display:'flex', justifyContent:'center', justifyItems:'end' }}>
+                <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" sketchType="MSPage">
+                  <path
+                    id="Path-2"
+                    className="path flex justify-start"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    strokeMiterlimit="10"
+                    d="M 200, 200 C 300, 200 100,100 200,0"
+                  />
+                  <polyline
+                    id="arrow"
+                    points="0,-9 18,0 0,9 5,0"
+                    fill="white"
+                  >
+                    <animateMotion rotate="auto" dur="1s" repeatCount="1" fill="freeze">
+                      <mpath xlinkHref="#Path-2" />
+                    </animateMotion>
+                  </polyline>
+                </g>
+              </svg>} />
+              </div>
+            <div className=" w-full  md:w-[35rem] p-5 relative">
+              <img src={img1} className="object-scale-down w-full h-full" />
             </div>
           </div>
-          <div className=" hidden md:block p-5 absolute right-12 md:left-[50%] lg:left-[54%]  2xl:left-[53%] xl:right-72 mt-[14.5rem] lg:mt-[16.5rem] ">
-            <p className="text-[#A020F0] text-right  font-medium text-lg absolute left-32 lg:mt-12 -top-10 w-52 ">
 
+          <div className="hidden md:flex flex-col items-start justify-center ">
+            <p className=" text-lg w-full lg:w-72 p-4">
               <br />{" "}
-              <span className="font-normal text-sm md:text-lg text-white">
+              <span className="  font-normal text-sm md:text-lg text-white">
                 {" "}
                 A glimpse of your hobbies and interests to know you better.
               </span>
             </p>
-            <div className="curvedLine rotate-[130deg] lg:rotate-[150deg] flex justify-start"></div>
+            <AnimatedArrow props={<svg  height="80px" viewBox="0 0 315 107" version="1.1" style={{ overflow: 'visible' }}>
+                <g id="Page-3" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" sketchType="MSPage">
+                  <path
+                    id="Path-3"
+                    className="path"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="3"
+                    strokeLinejoin="round"
+                    strokeMiterlimit="10"
+                    d="M -100, 180 C 100, 200 100, 100 100,0"
+                  />
+                  <polyline
+                    id="arrow"
+                    points="0,-9 18,0 0,9 5,0"
+                    fill="white"
+                  >
+                    <animateMotion rotate="auto" dur="1s" repeatCount="1" fill="freeze">
+                      <mpath xlinkHref="#Path-3" />
+                    </animateMotion>
+                  </polyline>
+                </g>
+              </svg>} />
+         
           </div>
-          <div className="flex md:hidden justify-center text-[#A020F0] text-center  font-medium ">
-            <span className="font-normal text-sm px-4 md:text-lg text-white">
-              {" "}
+          </div>
+          <div className="flex md:hidden justify-center text-[#A020F0] font-normal text-sm px-4 md:text-lg text-white text-center  font-medium ">
+          
+          
               Summarizes your career goals, your future plans, what would you like to accomplish.
-            </span>
+            
           </div>
         </div>} />
 
@@ -199,7 +251,7 @@ export default function HomeBody() {
                 5. Your Experience Timeline
                 <br />{" "}
                 <span className="font-normal text-center  md:text-right text-sm md:text-lg text-white">
-                Add relevant experince and your learning curve to the job you are applying.
+                  Add relevant experince and your learning curve to the job you are applying.
                 </span>
               </p>
             </div>
@@ -218,7 +270,7 @@ export default function HomeBody() {
 
         </div>} />
 
-       
+
       </div>
     </div>
   );
