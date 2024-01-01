@@ -23,7 +23,7 @@ const Achievement = () => {
   return (
     <CardFieldArray
       title='Achievement'
-      action={<ChipButton  size='small' color='primary' variant='outlined' label={<AddRoundedIcon />} onClick={() => append()} />}
+      action={<ChipButton  size='small' color='secondary' variant='outlined' label={<AddRoundedIcon />} onClick={() => append()} />}
       fields={fields}
     >
       {fields.length ? (

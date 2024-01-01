@@ -76,7 +76,7 @@ export default function HomeBody() {
                     strokeMiterlimit="10"
                     d="M 200, 200 C 300, 200 100,100 200,0"
                   />
-                  <polyline
+                  {/* <polyline
                     id="arrow"
                     points="0,-9 18,0 0,9 5,0"
                     fill="white"
@@ -84,7 +84,7 @@ export default function HomeBody() {
                     <animateMotion rotate="auto" dur="1s" repeatCount="1" fill="freeze">
                       <mpath xlinkHref="#Path-2" />
                     </animateMotion>
-                  </polyline>
+                  </polyline> */}
                 </g>
               </svg>} />
               </div>
@@ -96,7 +96,7 @@ export default function HomeBody() {
           <div className="hidden md:flex flex-col items-start justify-center ">
             <p className=" text-lg w-full lg:w-72 p-4">
               <br />{" "}
-              <span className="  font-normal text-sm md:text-lg text-white">
+              <span className="font-normal text-sm md:text-lg text-white">
                 {" "}
                 A glimpse of your hobbies and interests to know you better.
               </span>
@@ -113,25 +113,22 @@ export default function HomeBody() {
                     strokeMiterlimit="10"
                     d="M -100, 180 C 100, 200 100, 100 100,0"
                   />
-                  <polyline
+                  {/* <polyline
                     id="arrow"
                     points="0,-9 18,0 0,9 5,0"
                     fill="white"
-                  >
-                    <animateMotion rotate="auto" dur="1s" repeatCount="1" fill="freeze">
+                  > */}
+                    {/* <animateMotion rotate="auto" dur="1s" repeatCount="1" fill="freeze">
                       <mpath xlinkHref="#Path-3" />
-                    </animateMotion>
-                  </polyline>
+                    </animateMotion> */}
+                  {/* </polyline> */}
                 </g>
               </svg>} />
          
           </div>
           </div>
           <div className="flex md:hidden justify-center text-[#A020F0] font-normal text-sm px-4 md:text-lg text-white text-center  font-medium ">
-          
-          
               Summarizes your career goals, your future plans, what would you like to accomplish.
-            
           </div>
         </div>} />
 
@@ -171,7 +168,9 @@ export default function HomeBody() {
               {" "}
               Summarizes your career goals, your future plans, what would you like to accomplish.
             </span>
+            
           </div>
+         
         </div>} />
 
 

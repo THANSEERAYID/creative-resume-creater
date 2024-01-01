@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AnimatedArrow from '../components/AnimatedArrow'
+import FluidSimulation from './convas'
 
 const links = [
     { name: 'Our Templates', href: '#' },
@@ -16,7 +17,7 @@ const links = [
   export default function Header() {
     return (
       <div className="relative isolate overflow-hidden bg-black py-12 md:py-24 ">
-      
+      {/* <FluidSimulation/> */}
         <svg
           viewBox="0 0 1097 845"
           aria-hidden="true"

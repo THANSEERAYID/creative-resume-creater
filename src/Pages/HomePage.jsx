@@ -8,7 +8,6 @@ import Navbar from '../HomePageComp/Navbar'
 function HomePage() {
   return (
     <>
-    
     <Header/>
     <HomeBody/>
     <Footer/>

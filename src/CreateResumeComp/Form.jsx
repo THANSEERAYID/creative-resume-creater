@@ -23,6 +23,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { Stack } from '@mui/material'
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import Resume from './ResumePreview'
+import Typography from '@mui/material/Typography';
 
 
 
@@ -64,10 +65,10 @@ const AddForm = ({ handleFormChange }) => {
   const theme = createTheme({
     palette: {
       primary: {
-        main: 'rgb(0, 31, 90)'
+        main: 'rgb(0,0,0)'
       },
       secondary: {
-        main: 'rgb(102, 102, 102)'
+        main: 'rgb(0, 0, 0)'
       },
 
       blue: 'rgb(0, 57, 172)',
@@ -134,7 +135,10 @@ const AddForm = ({ handleFormChange }) => {
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <Card variant='outlined'>
-                  <CardHeader title='Intro' />
+                  <CardHeader title={ 
+                  <Typography variant="h6" style={{ fontSize: '15px' }}>
+                    Intro
+                  </Typography>} />
                   <CardContent>
                     <Intro />
                   </CardContent>
@@ -152,7 +156,13 @@ const AddForm = ({ handleFormChange }) => {
               <Grid item xs={12} md={12} order={{ xs: 1, md: 2 }}>
                 <Stack spacing={2} direction='column'>
                   <Card variant='outlined'>
-                    <CardHeader title='Profile Summary' />
+                    <CardHeader 
+                    
+                    title={ 
+                    <Typography variant="h6" style={{ fontSize: '15px' }}>
+                    Profile Summary
+                  </Typography>} 
+                    />
                     <CardContent>
                       <ProfileSummary />
                     </CardContent>
@@ -192,7 +202,7 @@ const AddForm = ({ handleFormChange }) => {
             </div>
           </div> */}
               <Grid item xs={12} order={{ xs: 3 }} justifyContent='center' >
-                  <Box display='flex' justifyContent='space-between' className='fixed right-[50%] left-2 bottom-2 w-1/2 '>
+                  <Box display='flex' justifyContent='space-between' className=' fixed right-[50%] left-2 bottom-2 w-1/2 '>
                     <Button type="submit" variant='contained'>
                       Preview
                     </Button>
